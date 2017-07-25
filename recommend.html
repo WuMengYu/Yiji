@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<script>
+		(function(){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+		})()
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style type="text/css">
+		 .clearfix:before,
+			.clearfix:after {       
+		    content: "";     /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+		    display: block;   /*加入的这个元素转换为块级元素。*/
+		    clear: both;     /*清除左右两边浮动。*/
+		    visibility: hidden;      /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+		    line-height: 0;    /*行高为0；*/
+		    height: 0;     /*高度为0；*/
+		    font-size:0;    /*字体大小为0；*/
+		}
+		.clearfix { *zoom:1;}   /*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+		body,html{
+				width: 100%;
+				height: 100%;
+				overflow:hidden;
+				
+		}
+		.wrap{
+			width: 100%;
+			height: 100%;
+		}
+		header .top{
+			height: 1.3rem;
+			background-image: url("images/home-logo_03.png");
+			background-size:30%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-color: #f5f5f5;
+			z-index:1;
+		}
+		header .top a{
+			display: block;
+			float: right;
+			width: 1rem;
+			position:absolute;
+			top:0.2rem;
+			right: 0.5rem;
+		}
+		header .top a img{
+			width:100%;
+			text-align: center;
+		}
+		section{
+			width: 100%;
+			height: 100%;
+			transition:all 0.3s;
+		}
+		section .part_left{
+			width: 100%;
+			height: 100%;
+			height: 6rem;
+			
+		}
+		section .part_left .qie{
+			background-image: url("images/u300.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			height: 0.8rem;
+		}
+		section .part_left .qie a{
+			display: block;
+			float: left;
+			width: 5.4rem;
+			height: 0.8rem;
+			/*border:1px solid red;*/
+		}
+		section .part_left .move{
+			/*height: 30rem;*/
+			overflow: hidden;
+			/*padding-top: 6rem;*/
+			
+			z-index:-1;
+		}
+		section .move .left div,section .move .right div{
+			height: 5.34rem;
+			margin-bottom: 0.2rem;
+		}
+		section .move .left{
+			transition:all 0.5s;
+		}
+		section .part_left .move a{
+			
+			display: block;
+		}
+		section .part_left .move img{
+			max-width: 100%;
+		}
+		.none{display: none;}
+		section .move .right{
+			transition:all 0.5s;
+		}
+		.ani{
+			transform:translate(0,-2.48rem);
+		}
+		footer{
+			width: 100%;
+			
+		}
+		footer .fix{
+			width: 100%;
+			/*height: 1.4rem;*/
+			background-color: #000;
+			position:fixed;
+			bottom:0;
+			left:0;
+		}
+		footer .fix a{
+			display: block;
+			width: 25%;
+			float: left;
+			text-align: center;
+			padding:0.2rem 0;
+			text-decoration: none;
+			line-height: 0.5rem;
+		}
+		footer .fix a span{
+			display: block;
+			color:#fff;
+			font-size: 0.1rem;
+		}
+		footer .fix .icon-2,footer .fix a .sp_2{
+			color:red;
+		}
+		footer .fix a:hover .icon{
+			color:red;
+		}
+		footer .fix a:hover span{
+			color:red;
+		}
+		.icon {
+		   width: 1em; height: 0.7em;
+		   vertical-align: -0.2em;
+		   fill: currentColor;
+		   overflow: hidden;
+		   color:#fff;
+		   width:25%;
+		   margin-top: -0.2rem;
+		  
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="top">
+				<a href="#"><img src="images/home-so_03.png" alt=""></a>
+			</div>
+		</header>
+		<section>
+			<div class="part_left">
+				<div class="qie">
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+				<div class="move">
+	    			<div class="left" >
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-7_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-8_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-9_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-7_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-8_02.jpg" alt=""></a>
+				        </div>
+				    </div>
+				    <div class="right none">
+			        	<div class="">
+				        	<a href="#"><img src="images/u68.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-7_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-8_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-9_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-9_02.jpg" alt=""></a>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="fix">
+				<a href="login_index.html">
+					<svg class="icon icon-1" aria-hidden="true">
+					  <use xlink:href="#icon-xuanzhong"></use>
+					</svg>
+					<span>展讯</span>
+				</a>
+				<a href="recommend.html">
+					<svg class="icon icon-2" aria-hidden="true">
+					  <use xlink:href="#icon-tuijian"></use>
+					</svg>
+					<span class="sp_2">推荐</span>
+				</a>
+				<a href="issue.html">
+					<svg class="icon icon-3" aria-hidden="true">
+					  <use xlink:href="#icon-fabu"></use>
+					</svg>
+					<span>发布</span>
+				</a>
+				<a href="personal.html">
+					<svg class="icon icon-4" aria-hidden="true">
+					  <use xlink:href="#icon-geren"></use>
+					</svg>
+					<span>个人</span>
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/hammer.min.js"></script>
+	<script src="js/iconfont1.js"></script>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(".qie a").click(function(){
+				var ind = $(this).index();
+				
+				$(".move>div").eq(ind).removeClass("none");
+				$(".move>div").eq(ind).siblings().addClass("none")
+				if(ind==1){
+					console.log(ind)
+					var e = $(this).parent().css("background-image","url(images/u302.jpg)")
+					console.log(e)
+				 }else{
+					$(this).parent().css("background-image","url(images/u300.jpg)")
+				}
+			})
+		
+		var sec = document.getElementsByTagName('section')[0]
+		var left = document.getElementsByClassName('left')[0]
+		var right = document.getElementsByClassName('right')[0]
+		
+		var hammertime = new Hammer(sec)
+		var hammertime1 = new Hammer(left)
+		var hammertime2 = new Hammer(right)
+		
+		hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+		hammertime1.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+		hammertime2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+	
+
+		
+		var i = 0;
+		hammertime.on("swipeup",function(){
+			
+			var cls = sec.getAttribute("class");
+			var cls1 = left.getAttribute("class");
+			var cls2 = right.getAttribute("class");
+			// if(cls.indexOf(" ani") == -1){
+
+			//  	sec.setAttribute("class",cls+" ani");
+
+			//  }
+			console.log(cls)
+			 // else{
+			// 	if(i<3){
+			// 		i++;
+			// 		left.style.marginTop = -5.54*i+"rem";
+			// 		right.style.marginTop = -5.54*i+"rem";
+			// 		console.log(left.style.marginTop);
+			// 	}
+				
+			// 	if(i>=3){
+			// 		i=3;	
+			// 	}
+			// }
+
+		})
+		//  hammertime2.on("swipedown",function(){
+		//  	var cls = banner.getAttribute("class");
+		// 	var cls1 = scroll.getAttribute("class");
+		// 	var cls2 = sec.getAttribute("class");
+		// 	var cls3 = right.getAttribute("class");
+		// 	if(cls.indexOf(" ani")!==-1){
+		// 		if(i>0){
+		// 			i--;
+		// 			left.style.marginTop = -5.54*i+"rem";
+		// 			right.style.marginTop = -5.54*i+"rem";
+		// 			console.log(left.style.marginTop);
+		// 		}else{
+		// 			cls = cls.replace(" ani","")
+		// 			cls1 = cls1.replace(" ani","")
+		// 			cls2 = cls2.replace(" ani","")
+		// 			banner.setAttribute("class",cls);
+		// 		 	scroll.setAttribute("class",cls1);
+		// 		 	sec.setAttribute("class",cls2);
+		// 		}
+				
+		// 	}
+				
+			
+		// })       
+		$(".header_top a").click(function(){
+			$(".search").css("display","block")
+		})
+		$(".search a").click(function(){
+			$(this).parent().css("display","none")
+		})
+		// $(".left .img").click(function(){
+		// 	$(this).css("background-image","url(images/aixin_1.png)")
+		// })
+		$(".left .img").click(function(){
+		    var bgi ="url(images/aixin_1.png)";
+		    var bgi1 = $(this).css('background-image');
+		    console.log(bgi1) 
+		    if(bgi!=bgi1 ){
+		        $(this).css('background-image',bgi ); 
+		        console.log(bgi)
+		    }else{
+		    	$(this).css('background-image','url(images/aixin.png)'); 
+		    }
+		}) 
+	</script>
+</body>
+</html>

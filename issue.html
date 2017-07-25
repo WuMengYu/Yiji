@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<script>
+		(function(){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+		})()
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		body,html{
+				width: 100%;
+				height: 100%;
+				overflow:hidden;
+				position:absolute;
+		}
+		.wrap{
+			width: 100%;
+			height: 100%;
+		}
+		header img{
+			max-width: 100%;
+		}
+		footer{
+			width: 100%;
+			
+		}
+		footer .fix{
+			width: 100%;
+			/*height: 1.4rem;*/
+			background-color: #000;
+			position:fixed;
+			bottom:0;
+			left:0;
+		}
+		footer .fix a{
+			display: block;
+			width: 25%;
+			float: left;
+			text-align: center;
+			padding:0.2rem 0;
+			text-decoration: none;
+			line-height: 0.5rem;
+		}
+		footer .fix a span{
+			display: block;
+			color:#fff;
+			font-size: 0.1rem;
+		}
+		footer .fix .icon-3,footer .fix a .sp_3{
+			color:red;
+		}
+		footer .fix a:hover .icon{
+			color:red;
+		}
+		footer .fix a:hover span{
+			color:red;
+		}
+		.icon {
+		   width: 1em; height: 0.7em;
+		   vertical-align: -0.2em;
+		   fill: currentColor;
+		   overflow: hidden;
+		   color:#fff;
+		   width:25%;
+		   margin-top: -0.2rem;
+		  
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<img src="images/u310.jpg" alt="">
+		</header>
+		<footer>
+			<div class="fix">
+				<a href="login_index.html">
+					<svg class="icon icon-1" aria-hidden="true">
+					  <use xlink:href="#icon-xuanzhong"></use>
+					</svg>
+					<span>展讯</span>
+				</a>
+				<a href="recommend.html">
+					<svg class="icon icon-2" aria-hidden="true">
+					  <use xlink:href="#icon-tuijian"></use>
+					</svg>
+					<span class="sp_2">推荐</span>
+				</a>
+				<a href="issue.html">
+					<svg class="icon icon-3" aria-hidden="true">
+					  <use xlink:href="#icon-fabu"></use>
+					</svg>
+					<span class="sp_3">发布</span>
+				</a>
+				<a href="personal.html">
+					<svg class="icon icon-4" aria-hidden="true">
+					  <use xlink:href="#icon-geren"></use>
+					</svg>
+					<span>个人</span>
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/iconfont1.js"></script>
+</body>
+</html>

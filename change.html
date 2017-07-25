@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<script>
+		(function(){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+		})()
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style type="text/css">
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		header .change{
+			width: 100%;
+			/*height: 100%;*/
+			
+			background-image: url("images/u364.jpg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+		header .change .left{
+			display: block;
+			/*border:1px solid red;*/
+			line-height: 2rem;
+		}
+		header .change .left img{
+			max-width: 15%;
+		}
+		section>img{
+			max-width: 100%;
+		}
+		section .revise{
+			display: block;
+			position:absolute;
+			top:2rem;
+			right:1.4rem;
+			line-height: 1rem;
+			text-align: right;
+		}
+		section .revise img{
+			max-width: 35%;
+		}
+		section div img{
+			max-width: 100%;
+		}
+		section .excel{
+			position:relative;
+			text-align: center;
+			/*display: none;*/
+		}
+		section .excel a{
+			display: block;
+			position:absolute;
+			top:3rem;
+			left:1.7rem;
+
+		}
+		section .excel a img{
+			max-width: 34%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="change">
+			<a href="personal.html" class="left"><img src="images/u364_01.jpg" alt=""></a>
+			
+		</div>	
+	</header>
+	<section>
+		<img src="images/u364_04.jpg" alt="">
+		<a href="#" class="revise">
+			<img src="images/u364_02.jpg" alt="">
+		</a>
+		<div>
+			<img src="images/u364_03.jpg" alt="">
+		</div>
+		
+		<div class="excel">
+			<img src="images/u371.png" alt="">
+			<a href="#" class="excel_a">
+				<img src="images/u371_01.png" alt="">
+			</a>
+		</div>
+	</section>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(".revise").click(function(){
+			$(".excel").css("margin-top","-4.3rem")
+		})
+		$(".excel_a").click(function(){
+		 
+		 	$(".excel").css("margin-top","4.3rem")
+		})
+	</script>
+</body>
+</html>

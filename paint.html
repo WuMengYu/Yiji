@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<script>
+		(function(){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+		})()
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.wrap{
+			width: 100%;
+			height:100%;
+			overflow: hidden;
+		}
+		header{
+			position:fixed;
+
+		}
+		header .top img{
+			max-width: 100%;
+		}
+		header a{
+			display: block;
+			position:absolute;
+			top:0.4rem;
+			right:0.2rem;
+			text-align: center;
+		}
+		header .top a img{
+			max-width: 40%;
+			margin-top: 0.4rem;
+		}
+		section{
+			width: 100%;
+			height: 100%;
+			margin-top: 1.7rem;
+		}
+		section div{
+			margin-bottom: 0.1rem;
+		}
+		section div a{
+			display: block;
+		}
+		section div a img{
+			max-width: 100%;
+		}
+		footer{
+			width: 100%;
+			
+		}
+		footer .fix{
+			width: 100%;
+			/*height: 1.4rem;*/
+			background-color: #000;
+			position:fixed;
+			bottom:0;
+			left:0;
+		}
+		footer .fix a{
+			display: block;
+			width: 25%;
+			float: left;
+			text-align: center;
+			padding:0.2rem 0;
+			text-decoration: none;
+			line-height: 0.5rem;
+		}
+		footer .fix a span{
+			display: block;
+			color:#fff;
+			font-size: 0.1rem;
+		}
+		footer .fix .icon-1,footer .fix a:first-child span{
+			color:red;
+		}
+		footer .fix a:hover .icon{
+			color:red;
+		}
+		footer .fix a:hover span{
+			color:red;
+		}
+		.icon {
+		   width: 1em; height: 0.7em;
+		   vertical-align: -0.2em;
+		   fill: currentColor;
+		   overflow: hidden;
+		   color:#fff;
+		   width:25%;
+		   margin-top: -0.2rem;
+		  
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+	    	<div class="top"><img src="images/u170.jpg" alt="">
+				<a href="login_index.html"><img src="images/u170_1.jpg" alt=""></a>
+	    	</div>
+	    </header>
+	    <section>
+	    	<div>
+	        	<a href="#"><img src="images/main-m-2_02.jpg" alt=""></a>
+	        </div>
+	        <div>
+	        	<a href="#"><img src="images/main-m-3_02.jpg" alt=""></a>
+	        </div>
+	        <div>
+	        	<a href="#"><img src="images/main-m-4_02.jpg" alt=""></a>
+	        </div>
+	        <div>
+	        	<a href="#"><img src="images/main-m-5_02.jpg" alt=""></a>
+	        </div>
+	   </section>
+	   <footer>
+			<div class="fix">
+				<a href="login_index.html" class="clearfix">
+					<svg class="icon icon-1" aria-hidden="true">
+					  <use xlink:href="#icon-xuanzhong"></use>
+					</svg>
+					<span>展讯</span>
+				</a>
+				<a href="recommend.html">
+					<svg class="icon icon-2" aria-hidden="true">
+					  <use xlink:href="#icon-tuijian"></use>
+					</svg>
+					<span>推荐</span>
+				</a>
+				<a href="issue.html">
+					<svg class="icon" aria-hidden="true">
+					  <use xlink:href="#icon-fabu"></use>
+					</svg>
+					<span>发布</span>
+				</a>
+				<a href="personal.html">
+					<svg class="icon" aria-hidden="true">
+					  <use xlink:href="#icon-geren"></use>
+					</svg>
+					<span>个人</span>
+				</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/iconfont1.js"></script>
+	<script>
+
+	</script>
+</body>
+</html>

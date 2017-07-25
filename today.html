@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<script>
+	(function(){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+		})()
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	<style type="text/css">
+
+		body,html{
+			width: 100%;
+			height: 100%;
+			overflow:hidden;
+			position:absolute;
+		}
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+			position:absolute;
+			top:0;
+			bottom:0;
+			overflow: hidden;
+		}
+		#five{
+			width: 100%;
+			height: 100%;
+			background-image: url("images/u10.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		.login{
+			width: 100%;
+			height: 100%;
+			background-image: url("images/u13.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position:relative;
+		}
+		#showtime{
+			position:absolute;
+			top:10rem;
+			left:4rem;
+			color:#000;
+			z-index:2;
+			font-size: 0.6rem;
+		}
+		.swiper-container #five a{
+			text-decoration: none;
+			display: block;
+			color:#000;
+			z-index:2;
+			font-size: 0.5rem;
+			position:absolute;
+			top:11.6rem;
+			left:38%;
+		}
+		.login form{
+			position:absolute;
+			top:5rem;
+			left:1.4rem;
+		}
+		.login .phone{
+			width: 8rem;
+			height: 1.4rem;
+			font-size: 0.5rem;
+		
+			background: url("images/输入手机号_u15.png") no-repeat center;
+			background-size:86%;
+			border:none;
+			border-bottom:1px solid #000;
+			
+		}
+		.login .password{
+			width: 8rem;
+			height: 1.4rem;
+			font-size: 0.5rem;
+			background: url("images/输入密码_u17.png") no-repeat center;
+			background-size:40%;
+			border:none;
+			border-bottom:1px solid #000;
+		}
+		.login .box{
+			
+			position:absolute;
+			top:9rem;
+			left:30%;
+		}
+		.login .box a{
+			text-decoration: none;
+			display: block;
+			float: left;
+			margin-right: 2.4rem;
+			color:#232323;
+			z-index:1;
+			font-size: 0.5rem;
+		}
+		.login p{
+			position:absolute;
+			bottom:2.5rem;
+			left:25%;
+			font-size: 0.3rem;
+			color:#232323;
+		}
+		.login p span{
+			color:#fff;
+		}
+		.login .pic{
+			width: 100%;
+			border-top: 1px solid #fff;
+			position:absolute;
+			bottom:0.8rem;
+		}
+		.login .pic a{
+			display: block;
+			margin: 0 auto;
+			padding-top: 0.5rem;
+			padding-left: 1.1rem;
+			width: 19%;
+			float: left;
+			
+			
+		}
+		.login .pic a img{
+			display: block;
+			float: left;
+			width: 100%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="five">
+				<span id="showtime"></span>
+				<a href="#">今日推送>></a>
+
+			</div>
+			<div class="swiper-slide login">
+				<form action="">
+					<input type="text" value="" class="phone"><br>
+					<input type="text" value="" class="password">
+				</form>
+				<div class="box">
+					<a href="login_index.html">登录</a>
+					<a href="#">注册</a>
+				</div>
+				<p>登录或注册即同意艺集<span>用户服务协议</span></p>
+				<div class="pic">
+					<a href="#"><img src="images/xl_03.png" alt=""></a>
+					<a href="#"><img src="images/wx_08.png" alt=""></a>
+					<a href="#"><img src="images/qq_03.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/hammer.min.js"></script>
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script>
+		$("#five a").click(function(){
+				$("#five").css("display","none")
+		})
+		var five = document.getElementById('five')
+			 var hammertime = new Hammer(five)
+			 hammertime.on("swiperight",function(){
+			 	location.href = "index.html"
+			 })
+		var mySwiper = new Swiper ('.swiper-container', {
+			    direction: 'horizontal',
+			})
+		//time
+		var now = new Date()
+		$("#showtime").text(now.getFullYear()+"/"+(now.getMonth()+1)+"/"+now.getDate())
+		//font-size
+		
+	</script>
+</body>
+</html>

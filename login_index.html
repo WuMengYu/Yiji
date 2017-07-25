@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<script>
+		(function(){
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+		})()
+	</script>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	
+	<style type="text/css">
+		 .clearfix:before,
+			.clearfix:after {       
+		    content: "";     /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+		    display: block;   /*加入的这个元素转换为块级元素。*/
+		    clear: both;     /*清除左右两边浮动。*/
+		    visibility: hidden;      /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+		    line-height: 0;    /*行高为0；*/
+		    height: 0;     /*高度为0；*/
+		    font-size:0;    /*字体大小为0；*/
+		}
+		.clearfix { *zoom:1;}   /*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+		body,html{
+			width: 100%;
+			height: 100%;
+			overflow:hidden;
+			position:absolute;
+		}
+		.wrap{
+			width: 100%;
+			height: 100%;
+
+		}
+		header .header_top{
+			height: 1.4rem;
+			background-image: url("images/home-logo_03.png");
+			background-size:30%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-color: #f5f5f5;
+			z-index:1;
+		}
+		header .header_top a{
+			display: block;
+			float: right;
+			width: 1rem;
+			margin-top: 0.1rem;
+			margin-right: 0.2rem;
+			line-height: 0.3rem;
+		}
+		header .header_top a img{
+			width:100%;
+			text-align: center;
+		}
+		header .search{
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+			display: none;
+			margin-bottom: 0.7rem;
+		}
+		header .search img{
+			max-width: 100%;
+		}
+		header .search a{
+			display: block;
+			position:absolute;
+			top:0.8rem;
+			right:0.2rem;
+		}
+		header .search a img{
+			max-width: 50%;
+		}
+		header .search input{
+			height: 1.2rem;
+			width: 9rem;
+			position:absolute;
+			top:0.3rem;
+			left:0.6rem;
+			background-image: url("images/home-so_03.png");
+			background-repeat: no-repeat;
+			background-size: 8%;
+			background-position: 0.5rem 0.5rem;
+			border:none;
+			outline: none;
+			text-indent: 1.5rem;
+			font-size: 0.5rem;
+		}
+		
+		.banner{
+			width: 100%;
+			height: 5.48rem;
+			background-color: #fff;
+			transition:all 0.3s;
+			z-index:-1;
+		}
+		.ani{
+			transform:translate(0,-5.48rem);
+		}
+		.banner img{
+			max-width: 100%;
+		}
+		.swiper-pagination-bullet-active{
+
+			background: red;
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+			bottom:-0.7rem;
+
+		}
+		.scroll{
+			margin-top: 0.2rem;
+			width: 100%;
+			height: 3rem;
+			background-color: #fff;
+			transition:all 0.3s;
+		}
+		.scroll .swiper-wrapper .swiper-slide{
+			width: 40%;
+			margin-right: 0.1rem;
+		}
+		.scroll img{
+			max-width: 100%;
+			
+		}
+		section{
+			width: 100%;
+			height: 100%;
+			transition:all 0.3s;
+		}
+		section .part_left{
+			width: 100%;
+			height: 6rem;
+			
+		}
+		section .part_left .qie{
+			background-image: url("images/u124.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			height: 0.8rem;
+		}
+		section .part_left .qie a{
+			display: block;
+			float: left;
+			width: 5.4rem;
+			height: 0.8rem;
+			/*border:1px solid red;*/
+		}
+		section .part_left .move{
+			/*height: 30rem;*/
+			overflow: hidden;
+			/*padding-top: 6rem;*/
+			
+			z-index:-1;
+		}
+		section .move .left div,section .move .right div{
+			height: 5.34rem;
+			margin-bottom: 0.2rem;
+		}
+		section .move .left{
+			transition:all 0.5s;
+		}
+		section .part_left .move a{
+			position:relative;
+			display: block;
+		}
+		section .move .left a .img{
+			background-image: url("images/aixin.png");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: 0.2rem 0.2rem;
+			/*height: 1rem;*/
+			width: 1.1rem;
+			position:absolute;
+			top:4.3rem;
+			right:3rem;
+
+		}
+		/*section .move .left a .img:hover{
+			background-image: url("images/aixin_1.png");
+			
+			background-size: 63%;
+			background-position: 0.2rem 0.2rem;
+		}*/
+
+		section .part_left .move img{
+			max-width: 100%;
+		}
+		.none{display: none;}
+		section .move .right{
+			transition:all 0.5s;
+		}
+		footer{
+			width: 100%;
+			
+		}
+		footer .fix{
+			width: 100%;
+			/*height: 1.4rem;*/
+			background-color: #000;
+			position:fixed;
+			bottom:0;
+			left:0;
+		}
+		footer .fix a{
+			display: block;
+			width: 25%;
+			float: left;
+			text-align: center;
+			padding:0.2rem 0;
+			text-decoration: none;
+			line-height: 0.5rem;
+		}
+		.icon {
+		   width: 1em; height: 0.7em;
+		   vertical-align: -0.2em;
+		   fill: currentColor;
+		   overflow: hidden;
+		   color:#fff;
+		   width:25%;
+		   margin-top: -0.2rem;
+		  
+		}
+		footer .fix a span{
+			display: block;
+			color:#fff;
+			font-size: 0.1rem;
+		}
+		footer .fix .icon-1,footer .fix a:first-child span{
+			color:red;
+		}
+		footer .fix a:hover .icon{
+			color:red;
+		}
+		footer .fix a:hover span{
+			color:red;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="search">
+				<img src="images/u155.jpg" alt="">
+				<input type="text">
+				<a href="#">
+				<img src="images/u155_1.jpg" alt="">
+				</a>
+			</div>
+			
+			<div class="header_top">
+				<a href="#"><img src="images/home-so_03.png" alt=""></a>
+			</div>
+			
+			<div class="swiper-container banner">
+	    		<div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="images/u62.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/u65.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/u68.jpg" alt=""></div>
+	        	</div>
+	    		<div class="swiper-pagination"></div>
+			</div>
+			<div class="swiper-container scroll">
+	    		<div class="swiper-wrapper">
+			        <div class="swiper-slide"><a href="paint.html"><img src="images/u97_01.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="images/u98_02.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="images/u99_02.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="images/u100_02.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="images/u101_02.jpg" alt=""></a></div>
+			        <div class="swiper-slide"><a href="#"><img src="images/u102_02.jpg" alt=""></a></div>
+	        	</div>
+	        	
+	    	</div>
+		</header>
+		<section>
+			<div class="part_left">
+				<div class="qie">
+					<a href="#"></a>
+					<a href="#"></a>
+				</div>
+				<div class="move">
+	    			<div class="left" >
+				        <div class="">
+				        	<a href="liping.html"><img src="images/main-m_01.jpg" alt="">
+								<div class="img"></div>
+				        	</a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-2_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-3_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-4_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-5_02.jpg" alt=""></a>
+				        </div>
+				        <!-- <div class="">
+				        	<a href="#"><img src="images/无标题.png" alt=""></a>
+				        </div> -->
+			        </div>
+			        <div class="right none">
+			        	<div class="">
+				        	<a href="#"><img src="images/u68.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-7_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-8_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-9_02.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/u65.jpg" alt=""></a>
+				        </div>
+				        <div class="">
+				        	<a href="#"><img src="images/main-m-5_02.jpg" alt=""></a>
+				        </div>
+			        </div>
+				</div>
+			</div>
+			
+		</section>
+		<footer>
+			<div class="fix">
+				<a href="login_index.html" class="clearfix">
+					<svg class="icon icon-1" aria-hidden="true">
+					  <use xlink:href="#icon-xuanzhong"></use>
+					</svg>
+					<span>展讯</span>
+				</a>
+				<a href="recommend.html">
+					<svg class="icon icon-2" aria-hidden="true">
+					  <use xlink:href="#icon-tuijian"></use>
+					</svg>
+					<span>推荐</span>
+				</a>
+				<a href="issue.html">
+					<svg class="icon" aria-hidden="true">
+					  <use xlink:href="#icon-fabu"></use>
+					</svg>
+					<span>发布</span>
+				</a>
+				<a href="personal.html">
+					<svg class="icon" aria-hidden="true">
+					  <use xlink:href="#icon-geren"></use>
+					</svg>
+					<span>个人</span>
+				</a>
+			</div>
+		</footer>
+		
+	</div>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/hammer.min.js"></script>
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script src="js/iconfont1.js"></script>
+
+	<script>
+
+		var mySwiper = new Swiper ('.banner', {
+		    direction: 'horizontal',
+		    loop: true,
+		    pagination: '.swiper-pagination',
+		      //------------------自动轮播----------------
+		    autoplay : 2000,//时间
+			autoplayDisableOnInteraction : false,//循环
+		    
+		  }) 
+	
+			var mySwiper = new Swiper ('.scroll', {
+		    direction: 'horizontal',
+		    loop: true,
+		    slidesPerView : 'auto',
+			loopedSlides :6,
+		    
+		  })
+
+			
+		var banner = document.getElementsByClassName('banner')[0]
+		var scroll = document.getElementsByClassName('scroll')[0]
+		var sec = document.getElementsByTagName('section')[0]
+		var left = document.getElementsByClassName('left')[0]
+		var right = document.getElementsByClassName('right')[0]
+		
+		var hammertime = new Hammer(banner)
+		var hammertime1 = new Hammer(scroll)
+		var hammertime2 = new Hammer(sec)
+		// var hammertime3 = new Hammer(mov)
+		hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+		hammertime1.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+		hammertime2.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+		// hammertime3.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+
+		
+		var i = 0;
+		hammertime2.on("swipeup",function(){
+			var cls = banner.getAttribute("class");
+			var cls1 = scroll.getAttribute("class");
+			var cls2 = sec.getAttribute("class");
+			var cls3 = left.getAttribute("class");
+			var cls4 = right.getAttribute("class");
+			if(cls.indexOf(" ani") == -1){
+
+				banner.setAttribute("class",cls+" ani");
+			 	scroll.setAttribute("class",cls1+" ani");
+			 	sec.setAttribute("class",cls2+" ani");
+
+			}else{
+				if(i<3){
+					i++;
+					left.style.marginTop = -5.54*i+"rem";
+					right.style.marginTop = -5.54*i+"rem";
+					console.log(left.style.marginTop);
+				}
+				
+				if(i>=3){
+					i=3;	
+				}
+			}
+
+		})
+		 hammertime2.on("swipedown",function(){
+		 	var cls = banner.getAttribute("class");
+			var cls1 = scroll.getAttribute("class");
+			var cls2 = sec.getAttribute("class");
+			var cls3 = right.getAttribute("class");
+			if(cls.indexOf(" ani")!==-1){
+				if(i>0){
+					i--;
+					left.style.marginTop = -5.54*i+"rem";
+					right.style.marginTop = -5.54*i+"rem";
+					console.log(left.style.marginTop);
+				}else{
+					cls = cls.replace(" ani","")
+					cls1 = cls1.replace(" ani","")
+					cls2 = cls2.replace(" ani","")
+					banner.setAttribute("class",cls);
+				 	scroll.setAttribute("class",cls1);
+				 	sec.setAttribute("class",cls2);
+				}
+				
+			}
+				
+			
+		})       
+		$(".header_top a").click(function(){
+			$(".search").css("display","block")
+		})
+		$(".search a").click(function(){
+			$(this).parent().css("display","none")
+		})
+		// $(".left .img").click(function(){
+		// 	$(this).css("background-image","url(images/aixin_1.png)")
+		// })
+		$(".left .img").click(function(){
+		    var bgi ="url(images/aixin_1.png)";
+		    var bgi1 = $(this).css('background-image');
+		    console.log(bgi1) 
+		    if(bgi!=bgi1 ){
+		        $(this).css('background-image',bgi ); 
+		        console.log(bgi)
+		    }else{
+		    	$(this).css('background-image','url(images/aixin.png)'); 
+		    }
+		})
+		$(".qie a").click(function(){
+			var ind = $(this).index();
+			
+			$(".move>div").eq(ind).removeClass("none");
+			$(".move>div").eq(ind).siblings().addClass("none")
+			if(ind==1){
+				console.log(ind)
+				var e = $(this).parent().css("background-image","url(images/u127.jpg)")
+				console.log(e)
+			 }else{
+				$(this).parent().css("background-image","url(images/u124.jpg)")
+			}
+		})
+	</script>
+</body>
+</html>
